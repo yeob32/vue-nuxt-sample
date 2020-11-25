@@ -16,7 +16,11 @@
     "@nuxtjs/axios": "^5.12.2",
     "ant-design-vue": "^1.6.5",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "swiper": "^6.3.5",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.6",

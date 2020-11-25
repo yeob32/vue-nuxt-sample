@@ -11,10 +11,13 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['ant-design-vue/dist/antd.css'],
+  css: ['ant-design-vue/dist/antd.css', 'swiper/swiper-bundle.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['@/plugins/antd-ui'],
+  plugins: [
+    { src: '@/plugins/antd-ui' },
+    { src: '@/plugins/vue-awesome-swiper', ssr: true },
+  ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,

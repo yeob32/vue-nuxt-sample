@@ -1,5 +1,34 @@
 # vue-nuxt-sample
 
+## Install
+
+```
+$ npx create-nuxt-app <project-name>
+or
+$ yarn create nuxt-app <project-name>
+```
+
+## 개발 도구 설치 및 설정
+
+`근데 설정이 자동으로 다되어있네? 갸꿀`
+
+- nuxt-property-decorator
+  ```
+  $ yarn add -D nuxt-property-decorator
+  ```
+- vue-class-component
+  ```
+  $ yarn add vue-class-component
+  ```
+- ESLint
+- Prettier
+- Jest
+- vue-awesome-swiper
+  ```
+  $ yarn add swiper vue-awesome-swiper
+  $ yarn add swiper // for css
+  ```
+
 ## Build Setup
 
 ```bash
