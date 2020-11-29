@@ -23,7 +23,7 @@
         "./*"
       ]
     },
-    "typeRoots": ["./types"],
+    "typeRoots": ["~/types"],
     "types": [
       "@types/node",
       "@nuxt/types"
