@@ -15,8 +15,9 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src: '@/plugins/antd-ui' },
-    { src: '@/plugins/vue-awesome-swiper', ssr: true },
+    { src: '~/plugins/antd-ui' },
+    { src: '~/plugins/vue-awesome-swiper', ssr: true },
+    { src: '~/plugins/vue-plugin-load-script.js', ssr: false },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
