@@ -125,6 +125,14 @@ export default class ClusteringNaverMap extends Vue {
     this.createMap()
     this.createMarkers()
     this.markerClustering()
+
+    window.naver.maps.Event.addListener(
+      this.map,
+      'mousedown',
+      function (e: any) {
+        console.log('asdsdsdsdsdsd')
+      }
+    )
   }
 
   async mounted() {
