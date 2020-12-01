@@ -18,6 +18,7 @@ export default {
     { src: '~/plugins/antd-ui' },
     { src: '~/plugins/vue-awesome-swiper', ssr: true },
     { src: '~/plugins/vue-plugin-load-script.js', ssr: false },
+    { src: '~/plugins/vue-infinite-loading', ssr: false },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

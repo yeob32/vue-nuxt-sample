@@ -29,4 +29,10 @@ export default class Store extends VuexModule {
     // server.app.$axios
     console.log('serverInit >>>>>>>>>>>')
   }
+
+  @Action
+  nuxtServerInit(vuexContext: any, context: any) {
+    console.log('vuexContext >>>> ', vuexContext)
+    console.log('context >>>> ', context)
+  }
 }
