@@ -1,6 +1,10 @@
 <template>
   <div>
-    <infinite-loading direction="top" @infinite="infiniteHandlerTopScroll">
+    <infinite-loading
+      direction="top"
+      @infinite="infiniteHandlerTopScroll"
+      forceUseInfiniteWrapper="true"
+    >
       <div slot="spinner"></div>
       <div slot="no-more">No more message</div>
       <div slot="no-results">No results message</div>
@@ -24,7 +28,11 @@
       </div>
     </div>
 
-    <infinite-loading ref="bottom" direction="bottom">
+    <infinite-loading
+      ref="bottom"
+      direction="bottom"
+      forceUseInfiniteWrapper="true"
+    >
       <div slot="spinner"></div>
       <div slot="no-more">No more message</div>
       <div slot="no-results">No results message</div>
