@@ -1,3 +1,12 @@
+import path from 'path'
+import dotenv from 'dotenv'
+
+if (process.env.NODE_ENV === 'production') {
+  dotenv.config({ path: path.join(__dirname, 'config/.env.production') })
+} else if (process.env.NODE_ENV === 'development') {
+  dotenv.config({ path: path.join(__dirname, 'config/.env.development') })
+}
+
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -28,6 +37,15 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    [
+      '@nuxtjs/dotenv',
+      // {
+      //   filename:
+      //     process.env.NODE_ENV === 'production'
+      //       ? './config/.env.production'
+      //       : './config/.env.development',
+      // },
+    ],
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -41,4 +59,7 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  publicRuntimeConfig: {},
+  privateRuntimeConfig: {},
 }
