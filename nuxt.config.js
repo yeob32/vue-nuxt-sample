@@ -52,10 +52,34 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    proxy: true,
+    // baseURL: 'https://reqres.in',
+  },
+
+  // proxy: {
+  //   '/api-test': {
+  //     target: 'https://reqres.in',
+  //     pathRewrite: { '^/api-test': '/api' },
+  //   },
+  //   '/api': {
+  //     target: 'https://reqres.in',
+  //   },
+  // },
+
+  proxy: [
+    [
+      '/api-test',
+      {
+        target: 'https://reqres.in',
+        pathRewrite: { '^/api-test': '/api' },
+      },
+    ],
+  ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
