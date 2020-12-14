@@ -25,6 +25,7 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~/plugins/antd-ui' },
+    { src: '~/plugins/axios-accessor', ssr: true },
     { src: '~/plugins/vue-awesome-swiper', ssr: true },
     { src: '~/plugins/vue-plugin-load-script.js', ssr: false },
     { src: '~/plugins/vue-infinite-loading', ssr: false },
@@ -60,16 +61,6 @@ export default {
     proxy: true,
     // baseURL: 'https://reqres.in',
   },
-
-  // proxy: {
-  //   '/api-test': {
-  //     target: 'https://reqres.in',
-  //     pathRewrite: { '^/api-test': '/api' },
-  //   },
-  //   '/api': {
-  //     target: 'https://reqres.in',
-  //   },
-  // },
 
   proxy: [
     [

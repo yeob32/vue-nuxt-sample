@@ -1,3 +1,5 @@
+// add "type": "module" in package.json
+
 import { Nuxt, Builder } from 'nuxt'
 import express from 'express'
 
@@ -13,12 +15,12 @@ async function start() {
   const { host, port } = nuxt.options.server
 
   // Build only in dev mode
-  // if (config.dev) {
-  const builder = new Builder(nuxt)
-  await builder.build()
-  // } else {
-  //   await nuxt.ready()
-  // }
+  if (config.dev) {
+    const builder = new Builder(nuxt)
+    await builder.build()
+  } else {
+    await nuxt.ready()
+  }
 
   // Give nuxt middleware to express
   app.use(nuxt.render)
