@@ -1,18 +1,18 @@
 <template>
   <div>
-    <h1>NAVER MAP</h1>
-    <MapContainer />
+    <h1>NAVER MAP - Clustering</h1>
+    <ClusteringNaverMap />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
-import MapContainer from '@/components/naver-map/MapContainer.vue'
+import ClusteringNaverMap from '@/components/naver-map/ClusteringNaverMap.vue'
 
 @Component({
   components: {
-    MapContainer,
+    ClusteringNaverMap,
   },
 })
 export default class Index extends Vue {}
